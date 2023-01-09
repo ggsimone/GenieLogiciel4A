@@ -9,7 +9,7 @@ import org.junit.Test;
 public class TestDossierBancaire {
 
 	@Test  
-	public void test1_1() 
+	public void test_deposer_getsolde() 
 	{
 		DossierBancaire dossier=new DossierBancaire();
 		dossier.deposer(100);
@@ -17,9 +17,13 @@ public class TestDossierBancaire {
 	}
 
 	@Test
-	public void test1_2() 
+	public void test_remunerer() 
 	{
-		//fail("Test1_2 Not yet implemented");
+		DossierBancaire dossier2=new DossierBancaire();
+		dossier2.deposer(1000);
+		dossier2.remunerer();
+		assertEquals(1003.2,dossier.get_solde(),0.0001);
 	}
 
+	
 }
